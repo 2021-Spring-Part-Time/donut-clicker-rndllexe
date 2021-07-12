@@ -1,5 +1,5 @@
 const game = {
-  score: 10000,
+  score: 0,
   totalScore: 0,
   totalClicks: 0,
   clickValue: 1,
@@ -51,12 +51,12 @@ const building = {
     if (game.score >= this.cost[index]) {
       game.score -= this.cost[index];
       this.count[index]++;
-      this.cost[index] = Math.ceil(this.cost[index] * 1.20);
+      this.cost[index] = Math.ceil(this.cost[index] * 1.15);
       display.updateScore();
       display.updateShop();
   }
   }
-};
+}; 
 
 const display = {
   updateScore: () => {
@@ -68,7 +68,7 @@ const display = {
   updateShop: () => {
     document.getElementById("shopContainer").innerHTML = "";
     for (i = 0; i < building.name.length; i++) {
-      document.getElementById("shopContainer").innerHTML += '<table class="shopButton" onclick="building.purchase('+i+')"><tr><td id="image"><img src="img/'+building.image[i]+'"></td><td id="nameAndCost"></td><p>'+building.name[i]+'</p><p><span>'+building.cost[i]+'</span> donuts</p><td id="amount"><span>'+building.count[i]+'</span></td></tr></table>'
+      document.getElementById("shopContainer").innerHTML += '<table class="shopButton" onclick="building.purchase('+i+')"><tr><td id="image"><img src="img/'+building.image[i]+'"></td><td id="nameAndCost"><p>'+building.name[i]+'</p><p>'+building.cost[i]+' </p></td><td id="amount"><span>'+building.count[i]+'</span></td></tr></table>'
     }
   }
 };
@@ -132,6 +132,6 @@ setInterval(() => {
   display.updateScore();
 }, 1000);
 
-setInterval(() => {
-  saveGame();
-}, 3000);
+// setInterval(() => {
+//   saveGame();
+// }, 3000);

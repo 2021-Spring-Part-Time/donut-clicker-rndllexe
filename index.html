@@ -13,15 +13,23 @@
 <body>
   <div class="container">
     <center>
-      <figure class="donutClicker unselectable">
+      <section id="header">
+        <ul class ="nav__list">
+          <li class="something">test</li>
+          <li class="something_else">test</li>
+        </ul>
+      </section>
+      <figure class="donutClicker">
         <img src="img/donut_PNG50.png" alt="" onclick="game.addToScore(game.clickValue)">
       </figure>
       <section class="donutShop" id="shopContainer">
       </section>
-      <section class="donutStats unselectable">
+      <section class="donutStorage">
         <button onclick="saveGame()">Save Game</button>
         <button onclick="resetGame()">Reset Game</button>
-        <span id="score">0</span> Donuts <br>
+      </section>
+      <section class="donutStats">
+        <span id="score">0</span> Donuts
         <span id="scorepersecond">0</span> Donuts Per Second
       </section>
     </center>

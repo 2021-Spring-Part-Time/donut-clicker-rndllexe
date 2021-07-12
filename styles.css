@@ -1,20 +1,7 @@
-.container {
-    
-}
-
-.donutStats {
-    background-color: aliceblue;
-    /* display: flex;
-    justify-content: center; */
-    width: 50%;
-}
-
-.donutClicker img{
+.donutClicker img {
     width: 25%;
     position: relative;
     transition: all .2s ease-in-out;
-    /* display: flex;
-    justify-content: center; */
 }
 
 .donutClicker img:hover {
@@ -25,12 +12,32 @@
     transform: scale(0.99);
 }
 
-.donutShop {
-    /* display: grid;
-    justify-content: baseline; */
+#shopContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.donutStats {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    width: 50%;
+}
+
+.donutStorage {
+    margin: 2.5%;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
 }
 
 .shopButton {
+
     background-color: #b5b5b5;
     transition: all .2s ease-in-out;
     border-radius: 1px;
@@ -39,11 +46,12 @@
 }
 
 .shopButton:hover {
+    cursor: pointer;
     background-color: #c7c7c7;
     transition: all .2s ease-in-out;
 }
 
-.shopButton #image{
+.shopButton #image {
     width: 25%;
 }
 
@@ -67,8 +75,4 @@
     color: #595959;
     font-family: roboto;
     width: 15%;
-}
-
-.unselectable {
-    user-select: none;
 }
