@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Donut Clicker</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <center>
+      <section id="header">
+        <ul class ="nav__list">
+          <li class="something">test</li>
+          <li class="something_else">test</li>
+        </ul>
+      </section>
+      <figure class="donutClicker">
+        <img src="img/donut_PNG50.png" alt="" onclick="game.addToScore(game.clickValue)">
+      </figure>
+      <section class="donutShop" id="shopContainer">
+      </section>
+      <section class="donutStorage">
+        <button onclick="saveGame()">Save Game</button>
+        <button onclick="resetGame()">Reset Game</button>
+      </section>
+      <section class="donutStats">
+        <span id="score">0</span> Donuts
+        <span id="scorepersecond">0</span> Donuts Per Second
+      </section>
+    </center>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
 </html>

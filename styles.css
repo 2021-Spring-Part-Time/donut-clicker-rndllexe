@@ -1,0 +1,78 @@
+.donutClicker img {
+    width: 25%;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.donutClicker img:hover {
+    transform: scale(1.10);
+}
+
+.donutClicker img:active {
+    transform: scale(0.99);
+}
+
+#shopContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.donutStats {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    width: 50%;
+}
+
+.donutStorage {
+    margin: 2.5%;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.shopButton {
+
+    background-color: #b5b5b5;
+    transition: all .2s ease-in-out;
+    border-radius: 1px;
+    width: 15%;
+    margin: 10px 0px 10px 0px;
+}
+
+.shopButton:hover {
+    cursor: pointer;
+    background-color: #c7c7c7;
+    transition: all .2s ease-in-out;
+}
+
+.shopButton #image {
+    width: 25%;
+}
+
+.shopButton img {
+    border-radius: 5%;
+    height: 58px;
+    width: 58px;
+}
+
+.shopButton #nameAndCost p {
+    margin: 0px;
+    width: 60%;
+}
+
+.shopButton #nameAndCost p:first-of-type {
+    font-size: 16px;
+}
+
+.shopButton #amount {
+    font-size: 36px;
+    color: #595959;
+    font-family: roboto;
+    width: 15%;
+}
